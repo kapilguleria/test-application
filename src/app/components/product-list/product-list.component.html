@@ -1,0 +1,90 @@
+<div class="wrapper" *ngIf="filtersLoaded | async">
+    <div class="container">
+        <div class="top-head d-flex flex-wrap align-items-center pl-4">
+            <img src="../../../assets/images/text-arrow.png" alt="text-arrow" class="top-icon-img pr-1">
+            <p class="m-0 p-0 blue-color">Product List</p>
+        </div>
+        <div *ngFor="let product of productList">
+            <section class="dashtop-section">
+                <div class="top-row d-flex flex-wrap align-items-center justify-content-center">
+                    <div class="custom-col bg-white d-flex flex-wrap align-items-center justify-content-center mr-2">
+                        <h1 class="m-0 font-weight-bold font-color">{{product.productId}}</h1>
+                    </div>
+                    <div class="custom-col bg-white d-flex flex-wrap align-items-center justify-content-center mr-2">
+                        <img src="{{product.imagePath}}" alt="mobile-group">
+                    </div>
+                    <div class="custom-col-lg bg-white pl-4 d-flex flex-wrap align-items-center">
+                        <div class="top-col w-100">
+                            <ul class="list-inline d-flex flex-wrap justify-content-strat align-items-center m-0">
+                                <li>
+                                    <h2 class="font-weight-bold text-dark m-0">{{product.title}}</h2>
+                                </li>
+                                <li>
+                                    <p class="m-0"><img src="../../../assets/images/gear.png" alt="gear"></p>
+                                </li>
+                                <li>
+                                    <p class="ago bg-gray m-0 text-center">2 Days Ago</p>
+                                </li>
+                                <li>
+                                    <p class="ago bg-pink m-0 mr-1 text-center pink-color radius">Dropship</p>
+                                </li>
+                                <li>
+                                    <p class="red-light radius m-0 mr-1"><i class="fa fa-cloud-download"
+                                            aria-hidden="true"></i></p>
+                                </li>
+                                <li>
+                                    <p class="yellow-light radius m-0 mr-1"><i class="fa fa-eye-slash"
+                                            aria-hidden="true"></i></p>
+                                </li>
+                                <li>
+                                    <p class="blue-light radius m-0"><i class="fa fa-cog" aria-hidden="true"></i></p>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="top-colnext w-100 mb-0">
+                            <ul class="list-inline m-0 d-flex flex-wrap justify-content-end align-items-center pr-3">
+                                <li>
+                                    <h2 class="font-weight-bold text-green m-0 text-left pr-3">${{product.price}}</h2>
+                                </li>
+                                <li>
+                                    <p class="m-0 pr-2"><i class="fa fa-eye text-gray" aria-hidden="true"></i></p>
+                                </li>
+                                <li>
+                                    <p class="m-0 pr-2"><i class="fa fa-heart text-gray" aria-hidden="true"></i></p>
+                                </li>
+                                <li>
+                                    <p class="m-0"><i class="fa fa-plus text-gray" aria-hidden="true"></i></p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="top-colbtm w-100 mb-0">
+                            <ul class="list-inline m-0 d-flex flex-wrap justify-content-start align-items-center pr-3">
+                                <li class="mr-2">
+                                    <p class="m-0 pr-2"><i class="fa fa-tag text-gray pr-1" aria-hidden="true"></i><span
+                                            class="text-gray font-weight-bold">{{product.tags}}</span>
+                                    </p>
+                                </li>
+                                <li class="mr-2">
+                                    <p class="m-0 pr-2"><i class="fa fa-star text-gray pr-1"
+                                            aria-hidden="true"></i><span
+                                            class="text-gray font-weight-bold">{{product.rating}}</span>
+                                    </p>
+                                </li>
+                                <li class="mr-2">
+                                    <p class="m-0"><i class="fa fa-check-square text-gray pr-1"
+                                            aria-hidden="true"></i><span
+                                            class="text-gray font-weight-bold">{{product.percentage}}%</span></p>
+                                </li>
+                                <li class="mr-2">
+                                    <p class="m-0"><i class="fa fa-bolt text-gray pr-1" aria-hidden="true"></i><span
+                                            class="text-gray font-weight-bold">ePack</span></p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
